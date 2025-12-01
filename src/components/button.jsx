@@ -1,7 +1,3 @@
-export default function Click({children, onClick }) {
-
-  
-return(<button onClick={onClick} >{children}</button>
-
-)
+export default function Click({ children, onClick, ...props }) {
+  return <button {...props} onClick={onClick}>{children}</button>;
 }

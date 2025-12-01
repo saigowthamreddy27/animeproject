@@ -16,7 +16,6 @@ function App() {
       <main>
         <h2>Top 3 Jonurs</h2>
         <section id="anime-list">
-          
           <ul>
             <AnimeLIst
               title={Anime_Detailes[0].title}
@@ -40,10 +39,10 @@ function App() {
         <section id="examples">
           <h2>Share HiAnime to your friends</h2>
           <menu>
-            <Click onClick={() => clickMe("TopAiring")}>Top Airing</Click>
-            <Click onClick={() => clickMe("MostPopular")}>Most Popular</Click>
-            <Click onClick={() => clickMe("MostFavorite")}>Most Favorite</Click>
-            <Click onClick={() => clickMe("LatestCompleted")}>
+            <Click className={anime==="TopAiring"?'active':""} onClick={() => clickMe("TopAiring")}>Top Airing</Click>
+            <Click className={anime==="MostPopular"?'active':""} onClick={() => clickMe("MostPopular")}>Most Popular</Click>
+            <Click className={anime==="MostFavorite"?'active':""} onClick={() => clickMe("MostFavorite")}>Most Favorite</Click>
+            <Click className={anime==="LatestCompleted"?'active':""} onClick={() => clickMe("LatestCompleted")}>
               Latest Completed
             </Click>
           </menu>
